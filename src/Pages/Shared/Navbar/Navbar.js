@@ -9,7 +9,10 @@ const Navbar = () => {
       <Link className='logo_nav' to="/">HEALTH <span>+</span>
       </Link>
 
-      <Link className='top_menu_text' to="/">Login</Link>
+      <div>
+        <Link className='top_menu_text' to="/login">Login</Link>
+        <Link className='top_menu_text' to="/register">Register</Link>
+      </div>
     </div>
   );
 };
