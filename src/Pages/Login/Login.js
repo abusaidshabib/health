@@ -22,7 +22,6 @@ const Login = () => {
       .catch(error => console.log(error));
   }
 
-
   return (
     <div className='form_div'>
       <h1 className='title_2'>Welcome back to us</h1>
