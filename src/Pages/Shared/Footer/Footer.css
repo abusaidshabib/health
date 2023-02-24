@@ -1,0 +1,12 @@
+.footer_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sideBoth);
+  height: 20vh;
+  min-height: 20vh;
+}
+
+.footer_menu {
+  list-style-type: none;
+}

@@ -1,0 +1,34 @@
+.hero_div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+  text-align: center;
+  padding: var(--sideBoth);
+  background-image: url("../../../assets/HeroSection.jpg"), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero_div .title_1 {
+  padding-bottom: 50px;
+  color: var(--orange);
+}
+
+.hero_div .para_1{
+  color: var(--gray);
+}
+
+.hero_img_div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_img_div img {
+  width: 100%;
+}
