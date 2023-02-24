@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--gray);
-  padding:var(--sideBoth);
+  padding: var(--sideBoth);
   height: 8vh;
   min-height: 8vh;
 }
@@ -24,7 +24,7 @@
   color: var(--orange);
 }
 
-.top_menu_text{
+.top_menu_text {
   text-decoration: none;
   font-size: 1.4rem;
   color: var(--white);
@@ -33,6 +33,17 @@
   font-weight: 600;
 }
 
-.top_menu_text:hover{
+.top_menu_text:hover {
   color: var(--orange);
+}
+
+.top_nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top_nav li{
+  padding: 0 15px;
 }

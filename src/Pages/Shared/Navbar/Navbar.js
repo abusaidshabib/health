@@ -9,9 +9,18 @@ const Navbar = () => {
       <Link className='logo_nav' to="/">HEALTH <span>+</span>
       </Link>
 
+      <ul>
+        <li>
+          <Link className='nav_menu_text' to="/dashboard/my-review">My Reviews</Link>
+        </li>
+        <li>
+          <Link className='nav_menu_text' to="/dashboard/add-services">Add Services</Link>
+        </li>
+      </ul>
+
       <div>
-        <Link className='top_menu_text' to="/login">Login</Link>
-        <Link className='top_menu_text' to="/register">Register</Link>
+        <Link className='orangeBtn' to="/login">Login</Link> &nbsp;&nbsp;
+        <Link className='orangeBtn' to="/register">Register</Link>
       </div>
     </div>
   );
