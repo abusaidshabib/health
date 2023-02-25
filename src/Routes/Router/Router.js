@@ -3,10 +3,14 @@ import AddServices from "../../DashBoard/AddServices/AddServices";
 import MyReviews from "../../DashBoard/MyReviews/MyReviews";
 import DashBoard from "../../Layout/DashBoard";
 import Main from "../../Layout/Main";
+import About from "../../Pages/About/About/About";
+import Contact from "../../Pages/Contact/Contact/Contact";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
 import Services from "../../Pages/Services/Services";
+import SingleService from "../../Pages/SingleService/SingleService";
+import PrivateRouter from "../PrivateRouter/PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -23,15 +27,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Services></Services>
+        element: <PrivateRouter><Services></Services></PrivateRouter>
       },
       {
         path: "/login",
         element: <Login></Login>
       },
       {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
+      },
+      {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/service/:id",
+        loader: ({ params }) => fetch(`http://localhost:5000/service/${params.id}`),
+        element: <SingleService></SingleService>
       }
     ]
   },
@@ -41,11 +58,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard/add-services",
-        element: <AddServices></AddServices>
+        element: <PrivateRouter><AddServices></AddServices></PrivateRouter>
       },
       {
         path: "/dashboard/my-review",
-        element: <MyReviews></MyReviews>
+        element: <PrivateRouter><MyReviews></MyReviews></PrivateRouter>
       }
     ]
   }

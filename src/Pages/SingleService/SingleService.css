@@ -1,0 +1,53 @@
+.single_service_page {
+  text-align: center;
+  padding: var(--sideBoth);
+}
+
+.single_service_page .title_2 {
+  padding: 50px 0;
+}
+
+.single_img_div {
+  width: 100%;
+  height: 100%;
+}
+
+.single_img_div img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.single_service_page .para_2 {
+  padding: 50px 0;
+}
+
+.single_service_page .para_2 span {
+  color: var(--orange);
+}
+
+.add_review .field_input {
+  margin: 50px 0;
+}
+
+.service_rev{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 30px 0;
+}
+
+.service_rev div{
+  margin-left: 30px;
+}
+
+.review_sin_div{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.service_rev img{
+  border-radius: 50%;
+}

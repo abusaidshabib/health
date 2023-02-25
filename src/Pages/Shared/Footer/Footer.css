@@ -5,6 +5,8 @@
   padding: var(--sideBoth);
   height: 20vh;
   min-height: 20vh;
+  border-top: 1px solid var(--gray);
+  margin-bottom: 150px;
 }
 
 .footer_menu {

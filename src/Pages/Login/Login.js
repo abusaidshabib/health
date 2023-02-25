@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import "./Login.css";
 import offers from "../../assets/offers.jpg";
 import { AuthContext } from '../../Context/UserContext/UserContext';
+import GooglePopUp from '../../Components/GooglePopUp/GooglePopUp';
 
 const Login = () => {
 
@@ -39,6 +40,7 @@ const Login = () => {
             <input className='field_input' type="text" name="password" id="password" />
 
             <input className='input_btn_submit' type="submit" value="Login" />
+            <GooglePopUp></GooglePopUp>
           </form>
         </div>
         <div className='img_div'>

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className='footer_div'>
       <div>
-        <Link className='logo_nav' to="/">+</Link>
+        <Link className='logo_nav' to="/">Health<span>+</span></Link>
         <div>
 
         </div>
@@ -14,30 +14,19 @@ const Footer = () => {
 
       <ul className='footer_menu'>
         <li>
-          <NavLink className="menu_text" to="/">Home</NavLink>
+          <NavLink className="menu_text" to="/home">Home</NavLink>
         </li>
         <li>
-          <NavLink className="menu_text" to="/">Home</NavLink>
+          <NavLink className="menu_text" to="/about">About</NavLink>
         </li>
         <li>
-          <NavLink className="menu_text" to="/">Home</NavLink>
-        </li>
-      </ul>
-
-      <ul className='footer_menu'>
-        <li>
-          <NavLink className="menu_text" to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink className="menu_text" to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink className="menu_text" to="/">Home</NavLink>
+          <NavLink className="menu_text" to="/contact">Contact</NavLink>
         </li>
       </ul>
 
       <div>
-
+        <input className='input_field' type="email" name="email" id="" />
+        <input className='orangeBtn' type="submit" value="Subscribe" />
       </div>
 
     </div>

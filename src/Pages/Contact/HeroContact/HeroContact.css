@@ -1,0 +1,11 @@
+.hero_Contact_div{
+  height: 40vh;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_Contact_div .title_1{
+  color: var(--white);
+}

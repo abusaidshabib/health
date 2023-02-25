@@ -36,7 +36,7 @@
 
 }
 
-.title_3{
+.title_3 {
   font-size: 2.6rem;
 }
 
@@ -44,12 +44,16 @@
   font-size: 2.8rem;
 }
 
-.para_2{
+.para_2 {
   font-size: 2.2rem;
 }
 
-.para_3{
+.para_3 {
   font-size: 1.6rem;
+}
+
+.para_4 {
+  font-size: 1.4rem;
 }
 
 .menu_text {
@@ -79,18 +83,45 @@
   border-radius: 5px;
 }
 
-.orangeBtn:hover{
+.orangeBtn:hover {
   background-color: var(--gray);
   color: var(--white);
 }
 
-.text_link{
+.text_link {
   text-decoration: none;
-  color: var(--green);
+  color: var(--orange);
   font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.outline_btn {
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gray);
+  font-weight: 600;
+  border: 2px solid var(--gray);
+  padding: 8px 0;
+}
+
+.outline_btn:hover{
+  color: var(--white);
+  background-color: var(--gray);
+}
+
+.align_btn_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align_btn_icon .icon_ofBtn {
+  font-size: 3.8rem;
+  margin-right: 10px;
 }
 
 html {

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import register from "../../assets/register.jpg";
+import GooglePopUp from '../../Components/GooglePopUp/GooglePopUp';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 
 const Register = () => {
@@ -53,6 +54,7 @@ const Register = () => {
             <input className='field_input' type="text" name="password" id="password" />
 
             <input className='input_btn_submit' type="submit" value="Register" />
+            <GooglePopUp></GooglePopUp>
           </form>
         </div>
         <div className='img_div'>

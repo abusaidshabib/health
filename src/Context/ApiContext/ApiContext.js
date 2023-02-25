@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { createContext } from "react";
+import { AuthContext } from '../UserContext/UserContext';
 
 export const ApiDataContext = createContext()
 
 const ApiContext = ({ children }) => {
   const [services, setServices] = useState([]);
+
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("http://localhost:5000/services")
