@@ -47,7 +47,7 @@ const UserContext = ({ children }) => {
   }
 
   const value = {
-    createUser, updateUser, verify, user, logIn, googlePopUp, logOut
+    createUser, updateUser, verify, user, logIn, googlePopUp, logOut, loading
   };
 
   return (

@@ -8,7 +8,7 @@ import SetAppointment from '../SetAppointment/SetAppointment';
 
 const Home = () => {
   
-  useTitle("Home")
+  useTitle("Home");
 
   return (
     <div>

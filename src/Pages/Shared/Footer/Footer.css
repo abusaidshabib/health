@@ -7,8 +7,22 @@
   min-height: 20vh;
   border-top: 1px solid var(--gray);
   margin-bottom: 150px;
+  width: 100%;
 }
 
 .footer_menu {
   list-style-type: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .footer_div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin: 0;
+  }
 }

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
+import { ClipLoader } from 'react-spinners';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 
 const PrivateRouter = ({ children }) => {
@@ -7,12 +8,16 @@ const PrivateRouter = ({ children }) => {
   const location = useLocation();
 
   if (loading) {
-    return <div></div>
+    return <div>
+      <ClipLoader loading={loading}/>
+    </div>
   }
 
-  if (user && user?.email) {
+
+  if (user && user?.uid) {
     return children;
   }
+  
   return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
 };
 

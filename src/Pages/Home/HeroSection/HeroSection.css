@@ -19,7 +19,7 @@
   color: var(--white);
 }
 
-.hero_div .title_1 span{
+.hero_div .title_1 span {
   color: var(--orange);
 }
 
@@ -53,4 +53,10 @@
 
 .hero_icons_text div {
   margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero_div {
+    padding-top: 10vh;
+  }
 }

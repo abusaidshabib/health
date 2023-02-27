@@ -15,11 +15,11 @@
   position: relative;
 }
 
-.help_content .title_2{
+.help_content .title_2 {
   padding-bottom: 50px;
 }
 
-.help_content .para_2{
+.help_content .para_2 {
   padding-bottom: 20px;
 }
 
@@ -57,4 +57,45 @@
   background-color: var(--green);
   right: 30%;
   top: 25%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .help_div {
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 100px;
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  .back_img {
+    display: none;
+  }
+
+  .img_div_help {
+    display: flex;
+    justify-items: center;
+  }
+
+  .img_div_help img {
+    width: 90%;
+  }
+
+  .input_field {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .help_div{
+    height: auto;
+    
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .input_field{
+    margin: 20px 0px;
+  }
 }

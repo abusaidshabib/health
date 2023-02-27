@@ -3,9 +3,8 @@
   grid-template-columns: 3fr 9fr;
   grid-gap: 50px;
   text-align: center;
-  padding: var(--sideBoth);
+  padding: 50px 100px;
   color: var(--gray);
-  margin: 50px 0;
 }
 
 .author_div {
@@ -59,7 +58,7 @@
 
 
 /* popup */
-.popUp_div{
+.popUp_div {
   width: 50%;
   height: 50vh;
   position: fixed;
@@ -69,10 +68,17 @@
   z-index: 4;
 }
 
-.visibility_off{
+.visibility_off {
   visibility: hidden;
 }
 
-.visibility_on{
+.visibility_on {
   visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+  .my_review_div {
+    padding: 80px 30px;
+    grid-template-columns: 1fr;
+  }
 }

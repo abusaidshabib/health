@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 import useTitle from '../../hooks/useTitle';
 import "./MyReview.css";
-import PopUp from './PopUp/PopUp';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MyReviews = () => {
 
@@ -20,6 +21,7 @@ const MyReviews = () => {
       .then(res => res.json())
       .then(data => setReviews(data))
   }, [user?.email])
+  console.log(user?.photoURL);
 
   // useEffect(() => {
   //   async function fetchData() {
@@ -46,6 +48,7 @@ const MyReviews = () => {
           if (data.deletedCount > 0) {
             const remaining = reviews.filter(rev => rev._id !== id);
             setReviews(remaining);
+            toast("Your file is deleted")
           }
         })
     }
@@ -78,6 +81,7 @@ const MyReviews = () => {
           ))
         }
       </div>
+      <ToastContainer />
     </div>
   );
 };

@@ -22,7 +22,7 @@
   padding: 0 50px;
 }
 
-.nav_menu_text{
+.nav_menu_text {
   text-decoration: none;
   font-size: 1.6rem;
   color: var(--white);
@@ -31,6 +31,19 @@
   letter-spacing: 2px;
 }
 
-.nav_menu_text:hover{
+.nav_menu_text:hover {
   color: var(--orange);
+}
+
+@media only screen and (max-width: 768px) {
+  .bottom_nav_div{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .bottom_nav_div ul{
+    padding: 0 20px;
+  }
 }

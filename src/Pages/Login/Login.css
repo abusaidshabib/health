@@ -64,3 +64,15 @@
   object-fit: cover;
   border-radius: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+  .form_div{
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form_div .form_sec {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

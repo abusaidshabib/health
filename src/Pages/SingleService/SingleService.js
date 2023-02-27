@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 import useTitle from '../../hooks/useTitle';
 import "./SingleService.css";
@@ -37,6 +38,7 @@ const SingleService = () => {
       .then(data => {
         if (data.acknowledged) {
           form.reset();
+          toast("review add")
         }
       })
       .catch(error => console.error(error));
@@ -78,6 +80,7 @@ const SingleService = () => {
         <input className='field_input' type="text" name="review" id="" required />
         <input className='orangeBtn' type="submit" value="Submit" />
       </form>
+      <ToastContainer />
     </div>
   );
 };

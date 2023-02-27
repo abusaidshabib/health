@@ -108,7 +108,7 @@
   padding: 8px 0;
 }
 
-.outline_btn:hover{
+.outline_btn:hover {
   color: var(--white);
   background-color: var(--gray);
 }
@@ -126,4 +126,26 @@
 
 html {
   font-size: 62.5%;
+}
+
+@media only screen and (max-width: 992px) {
+  :root {
+    --sideBoth: 0 50px;
+  }
+
+  html {
+    font-size: 45%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 35%;
+  }
 }

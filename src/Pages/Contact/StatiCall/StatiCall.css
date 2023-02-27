@@ -4,6 +4,7 @@
   grid-gap: 50px;
   padding: 50px 150px;
   align-items: center;
+  justify-content: center;
   color: var(--gray);
 }
 
@@ -18,4 +19,39 @@
   width: 350px;
   height: 400px;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .contact_img_div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hidden_img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .static_Contact {
+    padding: 50px 30px;
+    grid-gap: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .contact_img_div {
+    display: none;
+  }
+
+  .hidden_img {
+    display: none;
+  }
+
+  .static_Contact {
+    grid-template-columns: repeat(1,1fr);
+    text-align: center;
+  }
 }

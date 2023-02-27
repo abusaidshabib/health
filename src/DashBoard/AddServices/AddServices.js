@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useTitle from '../../hooks/useTitle';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddServices = () => {
 
@@ -41,6 +43,7 @@ const AddServices = () => {
       .then(data => {
         if (data.acknowledged) {
           form.reset();
+          toast("Service Add");
         }
       })
       .catch(error => console.log(error))
@@ -74,6 +77,7 @@ const AddServices = () => {
 
         <input className='input_btn_submit' type="submit" value="Add a service" />
       </form>
+      <ToastContainer />
     </div>
   );
 };

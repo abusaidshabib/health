@@ -11,8 +11,8 @@ const StatiCall = () => {
   return (
     <div className='static_Contact'>
       <div className='contact_img_div'>
-        <img src={contact1} alt="" />
-        <img src={contact2} alt="" />
+        <img className='hidden_img' src={contact1} alt="" />
+        <img className='hidden_img' src={contact2} alt="" />
         <img src={contact3} alt="" />
         <img src={contact4} alt="" />
       </div>
