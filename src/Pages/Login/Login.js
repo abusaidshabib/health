@@ -3,8 +3,12 @@ import "./Login.css";
 import offers from "../../assets/offers.jpg";
 import { AuthContext } from '../../Context/UserContext/UserContext';
 import GooglePopUp from '../../Components/GooglePopUp/GooglePopUp';
+import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
+
+  useTitle("Login")
 
   const { logIn } = useContext(AuthContext);
 
@@ -41,6 +45,8 @@ const Login = () => {
 
             <input className='input_btn_submit' type="submit" value="Login" />
             <GooglePopUp></GooglePopUp>
+            <p className='para_3'>If you don't have any account <Link to="/register" className='text_link'>Register</Link></p>
+            <br />
           </form>
         </div>
         <div className='img_div'>

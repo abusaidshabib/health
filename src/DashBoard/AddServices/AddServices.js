@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hooks/useTitle';
 
 const AddServices = () => {
+
+  useTitle("AddServices");
 
   const [size, setSize] = useState(null);
 

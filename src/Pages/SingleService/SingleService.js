@@ -1,12 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext/UserContext';
+import useTitle from '../../hooks/useTitle';
 import "./SingleService.css";
 
 const SingleService = () => {
 
+
+
   const { user } = useContext(AuthContext);
   const { title, image, details, price, _id } = useLoaderData();
+  useTitle(`${title}`);
   const [reviews, setReviews] = useState([]);
 
   const handleSubmitReview = event => {

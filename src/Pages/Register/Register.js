@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import register from "../../assets/register.jpg";
 import GooglePopUp from '../../Components/GooglePopUp/GooglePopUp';
 import { AuthContext } from '../../Context/UserContext/UserContext';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
+
+  useTitle("Register")
 
   const { createUser, updateUser, verify } = useContext(AuthContext);
 
@@ -55,6 +59,8 @@ const Register = () => {
 
             <input className='input_btn_submit' type="submit" value="Register" />
             <GooglePopUp></GooglePopUp>
+            <p className='para_3'>If you have any account <Link to="/login" className='text_link'>Login</Link></p>
+            <br/>
           </form>
         </div>
         <div className='img_div'>

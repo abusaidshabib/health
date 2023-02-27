@@ -2,8 +2,11 @@ import React, { useContext } from 'react';
 import { PhotoProvider } from 'react-photo-view';
 import ServiceCom from '../../Components/ServiceCom';
 import { ApiDataContext } from '../../Context/ApiContext/ApiContext';
+import useTitle from '../../hooks/useTitle';
 
 const Services = () => {
+
+  useTitle("Services");
 
   const { services } = useContext(ApiDataContext);
 
