@@ -10,7 +10,7 @@ const AddServices = () => {
   const [size, setSize] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://health-plus-backend.vercel.app/services")
       .then(res => res.json())
       .then(data => setSize(data.length))
   }, [])
@@ -32,7 +32,7 @@ const AddServices = () => {
       price
     }
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://health-plus-backend.vercel.app/services", {
       method: "POST",
       headers: {
         'content-type': "application/json"

@@ -1,4 +1,4 @@
-.main_nav_div{
+.main_nav_div {
   z-index: 5;
 }
 
@@ -61,13 +61,14 @@
   display: none;
 }
 
-.status_bar{
+.status_bar {
   display: none;
 }
 
+
 @media only screen and (max-width: 768px) {
 
-  .main_nav_div{
+  .main_nav_div {
     position: fixed;
     width: 100%;
     height: auto;
@@ -80,10 +81,12 @@
   .mobile_menu {
     display: block;
   }
-  .menu_hidden_res{
+
+  .menu_hidden_res {
     display: none;
   }
-  .unOrder_list{
+
+  .unOrder_list {
     display: grid;
     height: auto;
     width: 100%;
@@ -93,15 +96,15 @@
     padding: 50px 0;
   }
 
-  .unOrder_list li{
+  .unOrder_list li {
     padding: 8px 0;
   }
 
-  .unOrder_list .title_3{
+  .unOrder_list .title_3 {
     color: var(--orange);
   }
 
-    .status_bar {
-      display: block;
-    }
+  .status_bar {
+    display: block;
+  }
 }

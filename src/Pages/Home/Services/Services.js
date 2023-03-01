@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ApiDataContext } from '../../../Context/ApiContext/ApiContext';
 import "./Services.css";
-import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { PhotoProvider } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
 import ServiceCom from '../../../Components/ServiceCom';

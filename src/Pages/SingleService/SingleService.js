@@ -27,7 +27,7 @@ const SingleService = () => {
       review: review,
       title: title
     }
-    fetch('http://localhost:5000/reviews', {
+    fetch('https://health-plus-backend.vercel.app/reviews', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -46,7 +46,7 @@ const SingleService = () => {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews/${_id}`)
+    fetch(`https://health-plus-backend.vercel.app/reviews/${_id}`)
       .then(res => res.json())
       .then(data => setReviews(data.reverse()))
   })
@@ -62,6 +62,8 @@ const SingleService = () => {
         <p className='para_2'><b>Price:</b> <span>{price}$</span></p>
         <Link className='orangeBtn' to="/">Book Now</Link>
       </div>
+
+      <h2 className='title_2'>Comments</h2>
       <div className='review_sin_div'>
         {
           reviews.slice(0, 3).map(review =>
@@ -69,17 +71,20 @@ const SingleService = () => {
               <img src={review.auth_img} alt="" />
               <div>
                 <h3 className='title_3'>{review.name}</h3>
-                <p className='para_1'>{review.review}</p>
+                <p className='para_3'>{review.review}</p>
               </div>
             </div>
           )
         }
       </div>
       <form onSubmit={handleSubmitReview} className='add_review'>
-        <h1 className='title_3'>Add your review</h1>
+        <h1 className='title_2'>Add your review</h1>
         <input className='field_input' type="text" name="review" id="" required />
         <input className='orangeBtn' type="submit" value="Submit" />
       </form>
+      <br />
+      <br />
+      <br />
       <ToastContainer />
     </div>
   );

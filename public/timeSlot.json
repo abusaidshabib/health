@@ -1,0 +1,112 @@
+[
+  {
+    "time": [
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ],
+    "week": [
+      "Saturday",
+      "Monday"
+    ],
+    "status": "false",
+    "service": "Urgent care"
+  },
+  {
+    "time": [
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM"
+    ],
+    "week": [
+      "Sunday",
+      "Tuesday"
+    ],
+    "status": "false",
+    "service": "Mental health services"
+  },
+  {
+    "time": [
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM",
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM"
+    ],
+    "week": [
+      "Monday",
+      "Wednesday"
+    ],
+    "status": "false",
+    "service": "Women's health"
+  },
+  {
+    "time": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM"
+    ],
+    "week": [
+      "Tuesday",
+      "Monday"
+    ],
+    "status": "false",
+    "service": "Chronic disease management"
+  },
+  {
+    "time": [
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM",
+      "1.00 PM - 1.30 PM",
+      "1.30 PM - 2.00 PM"
+    ],
+    "week": [
+      "Wednesday",
+      "Monday"
+    ],
+    "status": "false",
+    "service": "Laboratory testing"
+  },
+  {
+    "time": [
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ],
+    "week": [
+      "Thursday",
+      "Sunday"
+    ],
+    "status": "false",
+    "service": "Diagnosis and treatment"
+  },
+  {
+    "time": [
+      "2.00 PM - 2.30 PM",
+      "2.30 PM - 3.00 PM",
+      "3.00 PM - 3.30 PM",
+      "3.30 PM - 4.00 PM",
+      "4.00 PM - 4.30 PM",
+      "4.30 PM - 5.00 PM"
+    ],
+    "week": [
+      "Friday",
+      "Thursday"
+    ],
+    "status": "false",
+    "service": "Preventative care"
+  }
+]

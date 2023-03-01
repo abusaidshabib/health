@@ -24,7 +24,7 @@ const ContactForm = () => {
             </label>
             <input className='field_input' type="text" name="password" id="password" />
 
-            <input className='input_btn_submit' type="submit" value="Register" />
+            <input className='input_btn_submit' type="submit" value="Send Mail" />
           </form>
         </div>
         <div className='img_div'>

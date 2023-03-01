@@ -3,11 +3,29 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/UserContext/UserContext';
 import "./Navbar.css";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [barMenu, setBarMenu] = useState(false);
   console.log(barMenu)
+
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerDirection: -1
+      }
+    }
+  }
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+  }
 
   return (
     <div className='main_nav_div'>
@@ -20,12 +38,12 @@ const Navbar = () => {
             user?.uid ?
               <>
                 <ul className='unOrder_list'>
-                  <li>
+                  <motion.li variants={item}>
                     <Link className='nav_menu_text' to="/dashboard/my-review">My Reviews</Link>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={item}>
                     <Link className='nav_menu_text' to="/dashboard/add-services">Add Services</Link>
-                  </li>
+                  </motion.li>
                 </ul>
               </>
               :
@@ -59,56 +77,61 @@ const Navbar = () => {
       </div>
       {
         barMenu ?
-          <ul className='unOrder_list status_bar'>
-            <li>
+          <motion.ul className='unOrder_list status_bar'
+            variants={container}
+            initial="hidden"
+            animate="show">
+            <motion.li variants={item}>
               <Link className='nav_menu_text' to="/home">Home</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={item}>
               <Link className='nav_menu_text' to="/services">Services</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={item}>
               <Link className='nav_menu_text' to="/About">About</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={item}>
               <Link className='nav_menu_text' to="/Contact">Contact</Link>
-            </li>
+            </motion.li>
             <br />
             <br />
             {
               user?.uid ?
                 <>
-                  <Link onClick={logOut} className='orangeBtn' to="/register">LogOut</Link>
+                  <motion.li variants={item}>
+                    <Link onClick={logOut} className='orangeBtn' to="/register">LogOut</Link>
+                  </motion.li>
                 </> :
                 <>
-                  <li>
+                  <motion.li variants={item}>
                     <Link className='orangeBtn' to="/login">Login</Link>
-                  </li>
+                  </motion.li>
                   <br />
                   <br />
                   <br />
-                  <li>
+                  <motion.li variants={item}>
                     <Link className='orangeBtn' to="/register">Register</Link>
-                  </li>
+                  </motion.li>
                 </>
             }
             <br />
-            <li>
+            <motion.li variants={item}>
 
-            </li>
-            <li></li>
-            <li>
+            </motion.li>
+            <motion.li variants={item}></motion.li>
+            <motion.li variants={item}>
               <br />
               <br />
               <h1 className='title_3'>Dashboard</h1>
               <br />
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={item}>
               <Link className='nav_menu_text' to="/dashboard/my-review">My Reviews</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={item}>
               <Link className='nav_menu_text' to="/dashboard/add-services">Add Services</Link>
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
           :
           <></>
       }

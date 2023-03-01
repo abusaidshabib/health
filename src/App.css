@@ -124,6 +124,23 @@
   margin-right: 10px;
 }
 
+.align_loader_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--orange);
+  transform-origin: 0%;
+}
+
 html {
   font-size: 62.5%;
 }

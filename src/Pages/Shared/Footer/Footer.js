@@ -14,13 +14,25 @@ const Footer = () => {
 
       <ul className='footer_menu'>
         <li>
-          <NavLink className="menu_text" to="/home">Home</NavLink>
+          <NavLink className="nav_menu_text" to="/home">Home</NavLink>
         </li>
         <li>
-          <NavLink className="menu_text" to="/about">About</NavLink>
+          <NavLink className="nav_menu_text" to="/about">About</NavLink>
         </li>
         <li>
-          <NavLink className="menu_text" to="/contact">Contact</NavLink>
+          <NavLink className="nav_menu_text" to="/contact">Contact</NavLink>
+        </li>
+      </ul>
+
+      <ul className='footer_menu'>
+        <li>
+          <NavLink className="nav_menu_text" to="/services">Services</NavLink>
+        </li>
+        <li>
+          <NavLink className="nav_menu_text" to="/about">Write Review</NavLink>
+        </li>
+        <li>
+          <NavLink className="nav_menu_text" to="/contact">Terms</NavLink>
         </li>
       </ul>
 

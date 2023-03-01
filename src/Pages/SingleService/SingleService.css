@@ -44,8 +44,8 @@
 
 .review_sin_div{
   display: grid;
-  justify-content: center;
   align-items: center;
+  text-align: left;
 }
 
 .service_rev img{

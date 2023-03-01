@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./BottomNav.css";
+import { motion } from "framer-motion"
 
 const BottomNav = () => {
   return (
-    <div className='bottom_nav_div'>
+    <motion.div className='bottom_nav_div' initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.5 }}>
       <div></div>
       <ul>
         <li>
@@ -21,7 +24,7 @@ const BottomNav = () => {
         </li>
       </ul>
       <div></div>
-    </div>
+    </motion.div>
   );
 };
 

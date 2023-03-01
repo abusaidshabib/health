@@ -8,7 +8,7 @@ const PrivateRouter = ({ children }) => {
   const location = useLocation();
 
   if (loading) {
-    return <div>
+    return <div className='align_loader_center'>
       <ClipLoader loading={loading}/>
     </div>
   }

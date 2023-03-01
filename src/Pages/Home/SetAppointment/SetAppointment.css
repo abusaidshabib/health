@@ -1,0 +1,81 @@
+.booking_main_form {
+  padding: 50px 100px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking_main_form .title_2 {
+  text-align: center;
+}
+
+.select_field {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--gray);
+  font-size: 2.2rem;
+  padding: 10px 0;
+}
+
+.select_field:focus {
+  outline: none;
+}
+
+.booking_form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  padding: 50px 0;
+}
+
+.booking_form div {
+  width: 100%;
+}
+
+.booking_form .select_field {
+  width: 100%;
+}
+
+.booking_btn {
+  text-decoration: none;
+  background-color: var(--orange);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--gray);
+  padding: 12px;
+  border: none;
+}
+
+.booking_btn:hover {
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+@media only screen and (max-width: 1200px) {
+  .booking_form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking_main_form {
+    padding: 50px 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .booking_main_form {
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .booking_form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

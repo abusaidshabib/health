@@ -1,5 +1,5 @@
 import React from 'react';
-import help from "../../../assets/help.jpg";
+import help from "../../../assets/offers.jpg";
 
 const HowAbout = () => {
   return (

@@ -1,9 +1,35 @@
 .popUp_compo{
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--green);
   color: var(--white);
+  position: fixed;
+  top: 25%;
+  right: 25%;
+  border-radius: 30px;
+  z-index: 5;
+}
+
+.position_relative{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.position_absolute{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px){
+  .popUp_compo{
+    width: 80%;
+    height: 50%;
+    top: 15%;
+    right: 10%;
+  }
 }

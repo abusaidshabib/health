@@ -5,6 +5,7 @@ import useTitle from '../../hooks/useTitle';
 import "./MyReview.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PopUp from './PopUp/PopUp';
 
 const MyReviews = () => {
 
@@ -14,33 +15,17 @@ const MyReviews = () => {
   const [reviews, setReviews] = useState([]);
   const [popUp, setPopUp] = useState();
 
-  console.log(popUp);
-
   useEffect(() => {
-    fetch(`http://localhost:5000/review?email=${user?.email}`)
+    fetch(`https://health-plus-backend.vercel.app/review?email=${user?.email}`)
       .then(res => res.json())
       .then(data => setReviews(data))
   }, [user?.email])
   console.log(user?.photoURL);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const response = await fetch(`http://localhost:5000/review?email=${user?.email}`);
-  //     const data = await response.json();
-  //     setReviews(data);
-  //   }
-
-  //   fetchData();
-  // }, [user?.email]);
-
-  // function handleClick() {
-  //   setReviews(null);
-  // }
-
   const handleDelete = id => {
     const proceed = window.confirm('Are you sure, you wanna delete this review');
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${id}`, {
+      fetch(`https://health-plus-backend.vercel.app/reviews/${id}`, {
         method: 'DELETE'
       })
         .then(res => res.json())
@@ -54,6 +39,12 @@ const MyReviews = () => {
     }
   }
 
+  console.log(user.photoURL);
+
+  const reFetch = () => {
+    setPopUp();
+  }
+
   return (
     <div className='my_review_div'>
       <div className='author_div'>
@@ -64,9 +55,6 @@ const MyReviews = () => {
           <p className='para_2'>{user?.email}</p>
         </div>
       </div>
-      {/* <div className={`popUp_div ${popUp ? "visibility_on" : "visibility_off"}`}>
-        <PopUp popUp={popUp} setPopUp={setPopUp} handleClick={handleClick}></PopUp>
-      </div> */}
       <div className='review_div_main'>
         {
           reviews?.map(review => (
@@ -81,6 +69,13 @@ const MyReviews = () => {
           ))
         }
       </div>
+      {
+        popUp &&
+        <div className="popUp_div">
+          <PopUp popUp={popUp} reFetch={reFetch} >
+          </PopUp>
+        </div>
+      }
       <ToastContainer />
     </div>
   );

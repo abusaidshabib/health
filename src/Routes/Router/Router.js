@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/service/:id",
-        loader: ({ params }) => fetch(`http://localhost:5000/service/${params.id}`),
+        loader: ({ params }) => fetch(`https://health-plus-backend.vercel.app/service/${params.id}`),
         element: <PrivateRouter><SingleService></SingleService></PrivateRouter>
       }
     ]
