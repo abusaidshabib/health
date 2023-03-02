@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { ApiDataContext } from '../../../Context/ApiContext/ApiContext';
 import { AuthContext } from '../../../Context/UserContext/UserContext';
@@ -91,7 +90,7 @@ const SetAppointment = () => {
             </form>
           </div>
           :
-          <h1 className='title_2'>Please login to book now</h1>
+          <></>
       }
       <ToastContainer />
     </div>

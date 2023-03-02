@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div className='main_nav_div'>
-      <div className='top_nav'>
+      <div className={`top_nav ${barMenu? `gray`:`green`}`}>
         <Link className='logo_nav' to="/">HEALTH <span>+</span>
         </Link>
 

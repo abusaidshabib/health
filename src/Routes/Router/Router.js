@@ -30,10 +30,6 @@ const router = createBrowserRouter([
         element: <PrivateRouter><Services></Services></PrivateRouter>
       },
       {
-        path: "/login",
-        element: <Login></Login>
-      },
-      {
         path: "/about",
         element: <About></About>
       },
@@ -42,15 +38,19 @@ const router = createBrowserRouter([
         element: <Contact></Contact>
       },
       {
-        path: "/register",
-        element: <Register></Register>
-      },
-      {
         path: "/service/:id",
         loader: ({ params }) => fetch(`https://health-plus-backend.vercel.app/service/${params.id}`),
         element: <PrivateRouter><SingleService></SingleService></PrivateRouter>
       }
     ]
+  },
+  {
+    path: "/login",
+    element: <Login></Login>
+  },
+  {
+    path: "/register",
+    element: <Register></Register>
   },
   {
     path: "/dashboard",

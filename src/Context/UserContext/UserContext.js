@@ -9,6 +9,7 @@ const UserContext = ({ children }) => {
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [preLoading, setPreLoading] = useState(true);
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth,
@@ -46,8 +47,17 @@ const UserContext = ({ children }) => {
     return signOut(auth);
   }
 
+  const spinner = document.getElementById("web-loader");
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setPreLoading(false);
+    }, 3000);
+  }
+
+
   const value = {
-    createUser, updateUser, verify, user, logIn, googlePopUp, logOut, loading
+    createUser, updateUser, verify, user, logIn, googlePopUp, logOut, loading, preLoading
   };
 
   return (

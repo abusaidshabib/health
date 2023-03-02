@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import router from './Routes/Router/Router';
 import { RouterProvider } from 'react-router-dom';
@@ -8,7 +7,6 @@ import { motion, useScroll } from "framer-motion";
 
 function App() {
 
-  
   const { scrollYProgress } = useScroll();
 
   return (

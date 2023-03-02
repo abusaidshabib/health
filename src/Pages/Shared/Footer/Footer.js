@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Footer.css";
+import { MdFacebook } from 'react-icons/md';
+import { FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 const Footer = () => {
   return (
     <div className='footer_div'>
       <div>
         <Link className='logo_nav' to="/">Health<span>+</span></Link>
-        <div>
-
+        <div className='footer-div-icons'>
+          <MdFacebook className='icon-footer'/>
+          <FaTwitter className='icon-footer' />
+          <FaGoogle className='icon-footer' />
+          <FaYoutube className='icon-footer' />
+          <AiFillInstagram className='icon-footer' />
         </div>
       </div>
 
@@ -35,10 +42,9 @@ const Footer = () => {
           <NavLink className="nav_menu_text" to="/contact">Terms</NavLink>
         </li>
       </ul>
-
-      <div>
-        <input className='input_field' type="email" name="email" id="" />
-        <input className='orangeBtn' type="submit" value="Subscribe" />
+      <div className='center-justify-align'>
+        <input className='footer_input_field' type="email" name="email" id="" />
+        <input className='footer_Btn' type="submit" value="Subscribe" />
       </div>
 
     </div>

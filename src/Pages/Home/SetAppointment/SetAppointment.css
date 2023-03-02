@@ -1,36 +1,47 @@
 .booking_main_form {
-  padding: 50px 100px;
+  padding: 50px 100px 0 100px;
   height: auto;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
+  height: auto;
 }
 
 .booking_main_form .title_2 {
   text-align: center;
 }
 
-.select_field {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid var(--gray);
-  font-size: 2.2rem;
-  padding: 10px 0;
-}
-
-.select_field:focus {
-  outline: none;
-}
-
 .booking_form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 50px;
-  padding: 50px 0;
+  padding: 50px;
+  background-color: var(--white);
+  border-radius: 20px;
+  color: var(--gray);
+  margin: 20px 0;
 }
 
 .booking_form div {
   width: 100%;
+}
+
+.select_field {
+  border: none;
+  border-bottom: 1px solid var(--gray);
+  background-color: transparent;
+  font-size: 2.2rem;
+  padding: 10px 0;
+  color: var(--gray);
+}
+
+.select_field:{
+  color: var(--gray);
+}
+
+.select_field:focus {
+  outline: none;
+  color: var(--gray);
 }
 
 .booking_form .select_field {
@@ -39,7 +50,7 @@
 
 .booking_btn {
   text-decoration: none;
-  background-color: var(--orange);
+  background-color: var(--green);
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -48,14 +59,14 @@
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
-  color: var(--gray);
+  color: var(--white);
   padding: 12px;
   border: none;
 }
 
 .booking_btn:hover {
-  background-color: var(--gray);
-  color: var(--white);
+  background-color: var(--orange);
+  color: var(--gray);
 }
 
 @media only screen and (max-width: 1200px) {

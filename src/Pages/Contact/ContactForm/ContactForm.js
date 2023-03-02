@@ -1,5 +1,5 @@
 import React from 'react';
-import offers from "../../../assets/help.jpg";
+import offers from "../../../assets/help.svg";
 
 const ContactForm = () => {
   return (

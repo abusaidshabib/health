@@ -1,59 +1,80 @@
 :root {
   /* color */
-  --orange: #FF8A00;
+  --orange: #ffc400;
   --yellow: #F7DC68;
-  --green: #2C6C5E;
+  --green: #006851;
   --purple: #A7226F;
   --gray: #212226;
   --white: #e0e0e0;
+  --blue: #00A6ED;
 
+  /* --orange: #FF8A00;
+      --yellow: #F7DC68;
+      --green: #2C6C5E;
+      --purple: #A7226F;
+      --gray: #212226;
+      --white: #e0e0e0; */
   /* gaps */
   --sideBoth: 0 100px;
 
   /* font size */
 }
 
+.green-text{
+  color: var(--green);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 /* fonts */
 
 .title_1 {
-  font-size: 9.8rem;
-  text-transform: uppercase;
+  font-size: 7.2rem;
   letter-spacing: 2px;
-  line-height: 82px;
+  line-height: 10.8rem;
 }
 
 .title_2 {
-  font-size: 6.2rem;
+  font-size: 3.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-
+  line-height: 5.69rem;
+  font-weight: 600;
 }
 
 .title_3 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  line-height: 3.30rem;
 }
 
 .para_1 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  line-height: 3.30rem;
 }
 
 .para_2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
 }
 
 .para_3 {
   font-size: 1.6rem;
+  line-height: 2.40rem;
+  letter-spacing: 1;
 }
 
 .para_4 {
   font-size: 1.4rem;
+  line-height: 2.09rem;
+  letter-spacing: 1;
 }
 
 .menu_text {
@@ -61,7 +82,6 @@
   font-size: 1.6rem;
   color: var(--gray);
   font-weight: 600;
-  font-family: 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
   line-height: 25px;
   letter-spacing: 2px;
@@ -78,7 +98,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--gray);
-  padding: 14px 26px;
+  padding: 10px 22px;
   background-color: var(--orange);
   border-radius: 5px;
 }
@@ -124,7 +144,7 @@
   margin-right: 10px;
 }
 
-.align_loader_center{
+.align_loader_center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,28 +161,55 @@
   transform-origin: 0%;
 }
 
+
 html {
   font-size: 62.5%;
+  line-height: 62.5%;
+  /* background-color: var(--white); */
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1536px) {
+  html {
+    font-size: 58%;
+    line-height: 58%;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 52%;
+    line-height: 52%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  html {
+    font-size: 48%;
+    line-height: 48%;
+  }
+}
+
+@media only screen and (max-width: 962px) {
   :root {
     --sideBoth: 0 50px;
   }
 
   html {
-    font-size: 45%;
+    font-size: 42%;
+    line-height: 42%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   html {
-    font-size: 40%;
+    font-size: 38%;
+    line-height: 38%;
   }
 }
 
 @media only screen and (max-width: 576px) {
   html {
     font-size: 35%;
+    line-height: 10%;
   }
 }

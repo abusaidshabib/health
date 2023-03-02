@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FcGoogle } from "react-icons/fc";
+import { FaFacebookSquare } from "react-icons/fa";
 import { AuthContext } from '../../Context/UserContext/UserContext';
 import { GoogleAuthProvider } from 'firebase/auth';
-import "./GooglePopUP.css";
 
-const GooglePopUp = () => {
+const FacebookPopup = () => {
 
   const { googlePopUp, user } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
@@ -23,8 +22,8 @@ const GooglePopUp = () => {
   }
 
   return (
-    <Link onClick={handleGPopUp}><FcGoogle className='icon_ofBtn' /></Link>
+    <Link onClick={handleGPopUp}><FaFacebookSquare className='facebook-icon-Btn' /></Link>
   );
 };
 
-export default GooglePopUp;
+export default FacebookPopup;

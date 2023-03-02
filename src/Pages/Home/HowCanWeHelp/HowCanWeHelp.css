@@ -1,7 +1,7 @@
 .help_div {
   background-color: var(--white);
-  height: 80vh;
-  padding: var(--sideBoth);
+  height: auto;
+  padding: 50px 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -59,6 +59,29 @@
   top: 25%;
 }
 
+.input_field_help {
+  width: 70%;
+  height: 50px;
+  border: none;
+  font-size: 2.4rem;
+}
+
+.helpBtn {
+  width: 30%;
+  height: 50px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: none;
+}
+
+.center-justify-align {
+  display: flex;
+}
+
 @media only screen and (max-width: 1200px) {
   .help_div {
     height: auto;
@@ -88,14 +111,18 @@
 }
 
 @media only screen and (max-width: 1400px) {
-  .help_div{
+  .help_div {
     height: auto;
-    
+
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .input_field{
+  .input_field {
     margin: 20px 0px;
+  }
+
+  .help_div {
+    grid-gap: 30px;
   }
 }

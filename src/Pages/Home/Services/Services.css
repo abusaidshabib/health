@@ -1,5 +1,6 @@
 .service_main_div {
   min-height: 80vh;
+  height: auto;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -24,6 +25,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
+  padding-bottom: 50px;
 }
 
 .single_card {
@@ -31,15 +33,9 @@
   height: 100%;
   padding: 30px;
   border-radius: 10px;
-  background-color: var(--gray);
-  color: var(--white);
-  box-shadow: 2px 4px 8px 2px var(--white);
-  /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(136, 136, 136, 0.19); */
-}
-
-.single_card:hover {
-  background-color: var(--white);
+  backdrop-filter: blur(15px);
   color: var(--gray);
+  border: 2px solid var(--gray);
 }
 
 .single_card img {
